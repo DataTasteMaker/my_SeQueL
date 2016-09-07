@@ -35,3 +35,26 @@ SELECT name, (population/1000000) as ' Population (mns)' FROM world WHERE contin
 ```sh
 SELECT name, population FROM world WHERE name IN ('France', 'Germany', 'Italy') 
 ```
+
+
+### 6. Show the countries which have a name that includes the word 'United'
+```sh
+SELECT name FROM world WHERE name LIKE "United%" 
+```
+
+
+### 7. Two ways to be big: A country is big if it has an area of more than 3 million sq km or it has a population of more than 250 million. Show the countries that are big by area or big by population. Show name, population and area. 
+```sh
+SELECT name, population, area FROM world WHERE (area > 3000000 OR population > 250000000) 
+```
+
+
+### 8. Exclusive OR (XOR). Show the countries that are big by area or big by population but not both. Show name, population and area. 
+#### Australia has a big area but a small population, it should be included. 
+#### Indonesia has a big population but a small area, it should be included. 
+#### China has a big population and big area, it should be excluded. 
+#### United Kingdom has a small population and a small area, it should be excluded. 
+```sh
+SELECT name, population, area FROM world WHERE ((area > 3000000 AND population < 250000000) OR (area < 
+3000000 AND population > 250000000)) 
+```
