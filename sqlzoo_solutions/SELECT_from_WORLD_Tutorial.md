@@ -102,11 +102,11 @@ WHERE name LIKE "A%" or name LIKE "B%"
 
 
 ### 13. Put the continents right... 
-### Oceania becomes Australasia 
-### Countries in Eurasia and Turkey go to Europe/Asia 
-### Caribbean islands starting with 'B' go to North America, other Caribbean islands go to South America 
-### Order by country name in ascending order 
-### Show the name, the original continent and the new continent of all countries. 
+##### Oceania becomes Australasia 
+##### Countries in Eurasia and Turkey go to Europe/Asia 
+##### Caribbean islands starting with 'B' go to North America, other Caribbean islands go to South America 
+##### Order by country name in ascending order 
+##### Show the name, the original continent and the new continent of all countries. 
 ```sh
 SELECT name, continent, 
 CASE WHEN continent='Oceania' THEN 'Australasia' 
