@@ -148,7 +148,8 @@ WHERE name LIKE '____'
 -- Fiji
 
 
-### 11. The capital of Luxembourg is Luxembourg. Show all the countries where the capital is the same as the name of the country. Find the country where the name is the capital city.
+### 11. The capital of Luxembourg is Luxembourg. 
+### Show all the countries where the capital is the same as the name of the country. Find the country where the name is the capital city.
 
 SELECT name
 FROM world
@@ -161,7 +162,8 @@ WHERE name = capital
 -- Singapore
 
 
-### 12. The capital of Mexico is Mexico City. Show all the countries where the capital has the country together with the word "City". Find the country where the capital is the country plus "City".
+### 12. The capital of Mexico is Mexico City. 
+### Show all the countries where the capital has the country together with the word "City". Find the country where the capital is the country plus "City".
 
 SELECT name
 FROM world
@@ -193,7 +195,8 @@ WHERE capital LIKE concat('%',name,'%')
 -- San Marino San Marino
 
 ### 14. Find the capital and the name where the capital is an extension of name of the country.
-### You should include Mexico City as it is longer than Mexico. You should not include Luxembourg as the capital is the same as the country.
+### You should include Mexico City as it is longer than Mexico. 
+### You should not include Luxembourg as the capital is the same as the country.
 
 SELECT name, capital
 FROM world
